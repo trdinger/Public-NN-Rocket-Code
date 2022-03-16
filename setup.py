@@ -30,7 +30,7 @@ setup(
 #        'pickle5>=0.0.11', 
 #        'graphviz>=0.16',
     ],
-    url='https://github.ibm.com/IBM-Research-AI/NN-Rocket_Early_Access',
+    url='https://github.com/trdinger/Public-NN-Rocket-Code/tree/AWS_test',
     license='IBM',
     author='Representation Learning Team',
     author_email='dinger@us.ibm.com',
@@ -48,7 +48,7 @@ setup(
         'Topic :: System :: Distributed Computing',
     ],
     project_urls={
-        'Bug Reports': 'https://github.ibm.com/IBM-Research-AI/NN-Rocket_Early_Access/issues',
-        'Source': 'https://github.ibm.com/IBM-Research-AI/NN-Rocket_Early_Access',
+        'Bug Reports': 'https://github.com/trdinger/Public-NN-Rocket-Code/tree/AWS_test/issues',
+        'Source': 'https://github.com/trdinger/Public-NN-Rocket-Code/tree/AWS_test',
     },
 )
