@@ -4,15 +4,16 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin dinger@us.ibm.com.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t $nn-rocket_test:$IMAGE_TAG .
-      - docker tag $nn-rocket_test:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$nn-rocket_test:$IMAGE_TAG      
+      - docker build -t $nn-rocket_test:latest .
+      - docker tag $nn-rocket_test:latest dinger@us.ibm.com.dkr.ecr.us-east-1.amazonaws.com/$nn-rocket_test:latest      
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$nn-rocket_test:$IMAGE_TAG
+      - docker push dinger@us.ibm.com.dkr.ecr.us-east-1.amazonaws.com/$nn-rocket_test:latest
+
