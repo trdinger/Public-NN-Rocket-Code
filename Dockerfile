@@ -1,5 +1,5 @@
 FROM golang:1.12-alpine AS build
-#Install git
+#Install git package
 RUN apk add --no-cache git
 #Get the hello world package from a GitHub repository
 RUN go get github.com/golang/example/hello
