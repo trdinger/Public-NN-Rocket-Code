@@ -9,11 +9,11 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t nn-rocket_test:latest .
-      - docker tag nn-rocket_test:latest 303120020603.dkr.ecr.us-east-1.amazonaws.com/nn-rocket_test:latest      
+      - docker build -t public.ecr.aws/w0l2m1u4/nn-rocket_test:latest .
+      - docker tag public.ecr.aws/w0l2m1u4/nn-rocket_test:latest 303120020603.dkr.ecr.us-east-1.amazonaws.com/public.ecr.aws/w0l2m1u4/nn-rocket_test:latest      
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 303120020603.dkr.ecr.us-east-1.amazonaws.com/nn-rocket_test:latest
+      - docker push 303120020603.dkr.ecr.us-east-1.amazonaws.com/public.ecr.aws/w0l2m1u4/nn-rocket_test:latest
 
