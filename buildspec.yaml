@@ -15,5 +15,5 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 303120020603.dkr.ecr.us-east-1.amazonaws.com/public.ecr.aws/w0l2m1u4/nn-rocket_test:${CODEBUILD_RESOLVED_SOURCE_VERSION}-v${CODEBUILD_BUILD_NUMBER}
+      - docker push 303120020603.dkr.ecr.us-east-1.amazonaws.com/public.ecr.aws/w0l2m1u4/nn-rocket_test:latest
 
